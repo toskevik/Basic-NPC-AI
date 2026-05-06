@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "PointAndClickInput",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "57027d64-0cc5-40dc-9e26-f4b71351c193",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "5cc2608d-5133-4080-93bd-ac8e9fe2ab00",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "18e67872-b781-47ed-b9c6-55d7b22da8d8",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
