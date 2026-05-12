@@ -81,7 +81,7 @@ public class NPCController : MonoBehaviour
         // Calculate the angle between the NPC's forward vector and the direction to the player
         var angleToPlayer = Vector3.Angle(direction, npcHead.up);
 
-        // If the NPC is patrolling, move towards the current waypoint
+        // If the NPC is patrolling, keep moving towards the current waypoint
         if (currentState==State.Patrol && wayPoint.Length > 0)
         {
             // Ensure the NPC's animation state is set to walking
@@ -112,6 +112,9 @@ public class NPCController : MonoBehaviour
             && (angleToPlayer < fieldOfViewHalfAngle || currentState == State.Chase || currentState == State.Attack))
         {
             // If the NPC is chasing the player, set the speed to run speed
+            // Tuning the NPC to be more persistent in chasing the player,
+            // even if the player goes out of the NPC's field of view,
+            // as long as the player is within the chase distance
             currentState = State.Chase;
             _speed = runSpeed;
 
